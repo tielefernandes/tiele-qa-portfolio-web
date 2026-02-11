@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
 </head>
 
 <body>
@@ -33,32 +34,39 @@
 
     <!-- HERO -->
     <section class="hero">
-        <img src="foto-tica.jpg" class="foto">
-        <h1>Tiele Fernandes</h1>
 
-        <h2 id="title">QA Engineer | Test Automation | API Testing</h2>
-
-        <p class="about-hero" id="heroSummary">
-            QA Engineer with experience in manual testing, Cypress automation and API validation.
-            Focused on delivering quality in web applications and improving testing processes
-            with automation and CI/CD practices.
-        </p>
-
-        <p class="open" id="openToWork">🟢 Open to remote international opportunities</p>
-
-        <div class="hero-buttons">
-            <a href="cv-en.pdf" class="btn-main" id="cvBtnMain" download>Download CV</a>
-            <a href="https://github.com/tielefernandes" target="_blank" class="btn-outline"><i
-                    class="fab fa-github"></i></a>
+        <div class="hero-left">
+            <img src="foto-tica.jpg" class="foto">
         </div>
-        <a href="https://www.linkedin.com/in/tiele-fernandes/" target="_blank" class="hire" id="hireLink"><i
-                class="fab fa-linkedin"></i>
-            Let’s work together →
-        </a>
+
+        <div class="hero-right">
+            <h1>Tiele Fernandes</h1>
+            <h2>QA Engineer</h2>
+
+            <div class="hero-buttons">
+                <a href="mailto:seuemail@email.com" class="pill">
+                    <i class="fa-regular fa-envelope"></i> Email
+                </a>
+
+                <a href="https://linkedin.com" target="_blank" class="pill">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+
+                <a href="https://github.com" target="_blank" class="pill">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a href="#" class="pill">
+                    <i class="fa-solid fa-phone"></i> +55 47 99211-2469
+                </a>
+            </div>
+        </div>
+
     </section>
 
+
     <!-- SOBRE -->
-    <section id="about">
+    <section id="about" class="reveal">
         <h3 id="aboutTitle">Sobre mim</h3>
         <p id="aboutText">
             Profissional de Qualidade de Software com experiência em automação Cypress,
@@ -74,7 +82,8 @@
             <img src="s-ctfl.png" alt="ISTQB CTFL Certification">
         </div>
     </section>
-    <section class="learning">
+
+    <section class="learning" class="reveal">
         <h3 id="learningTitle">Currently Learning</h3>
 
         <div class="cards">
@@ -124,7 +133,7 @@
 
 
     <!-- EXPERIÊNCIA -->
-    <section id="exp">
+    <section id="exp" class="reveal">
         <h3 id="expTitle">Experience</h3>
 
         <div class="timeline">
@@ -204,9 +213,38 @@
         </div>
     </section>
 
+    <section class="education reveal">
+        <h3 id="edu-title">Formação Acadêmica</h3>
+        <div class="edu-card">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="edu-info">
+                <h3>Bacharelado em Sistemas para Internet</h3>
+                <p>Unisociesc</p>
+                <span>2018 — 2021</span>
+            </div>
+        </div>
+
+        <div class="edu-card">
+            <div class="edu-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="edu-info">
+                <h3>Pós-graduação em Engenharia de Software</h3>
+                <p>PUC</p>
+                <span>2026 — em andamento</span>
+            </div>
+        </div>
+
+    </section>
+
+
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="reveal">
         <h3>Skills</h3>
 
         <div class="skill">
@@ -232,7 +270,7 @@
     </section>
 
     <!-- PROJETOS -->
-    <section id="projects">
+    <section id="projects" class="reveal">
         <h3 id="projectsTitle">Projetos QA</h3>
 
         <div class="cards">
@@ -297,7 +335,7 @@
         </div>
     </section>
 
-    <section class="knowledge">
+    <section class="knowledge" class="reveal">
         <h3 id="knowledgeTitle">Knowledge & Tools</h3>
 
         <div class="knowledge-list">
@@ -367,11 +405,10 @@
     </section>
 
     <footer>
-        © 2026 — Tiele Fernandes
+        © 2026 — Developed by Tiele Fernandes 🧪
     </footer>
 
     <script src="script.js"></script>
 </body>
 
 </html>
-
