@@ -757,12 +757,36 @@ footer {
 
     .hero {
         margin-top: 100px;
-        padding: 20px 15px;
+        padding: 30px 15px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-left {
+        flex-shrink: 1;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .pill {
+        max-width: 150px;
+        text-align: center;
     }
 
     .foto {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         margin-bottom: 15px;
     }
 
@@ -773,15 +797,22 @@ footer {
 
     h2 {
         font-size: 18px;
+        font-weight: 400;
     }
 
     .hero-buttons {
         gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .pill {
         padding: 8px 14px;
         font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
     }
 
     section {
@@ -915,12 +946,35 @@ footer {
 
     .hero {
         margin-top: 80px;
-        padding: 15px 12px;
+        padding: 20px 12px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-size: 26px;
+        margin: 8px 0;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
     }
 
     .foto {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         margin-bottom: 12px;
     }
 
@@ -931,16 +985,27 @@ footer {
 
     h2 {
         font-size: 16px;
+        font-weight: 400;
     }
 
     .hero-buttons {
         gap: 6px;
         flex-direction: column;
         width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-buttons .pill {
+        width: auto;
+        max-width: 90%;
+        justify-content: center;
+        white-space: normal;
     }
 
     .pill {
-        width: 100%;
+        width: auto;
+        max-width: 90%;
         padding: 10px 12px;
         font-size: 12px;
     }
@@ -1083,7 +1148,29 @@ footer {
 
     .hero {
         margin-top: 70px;
-        padding: 12px 10px;
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-size: 22px;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
     }
 
     .foto {
@@ -1098,6 +1185,7 @@ footer {
 
     h2 {
         font-size: 14px;
+        font-weight: 400;
     }
 
     section {
@@ -1111,6 +1199,12 @@ footer {
     .pill {
         font-size: 11px;
         padding: 8px 10px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
     }
 
     .card {
