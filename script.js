@@ -2,6 +2,32 @@ const REVEAL_OFFSET = 80;
 
 const ptBtn = document.getElementById("ptBtn");
 const enBtn = document.getElementById("enBtn");
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const navMenu = document.querySelector(".nav-menu");
+
+// Mobile menu toggle
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  // Close menu when clicking on a link
+  document.querySelectorAll(".nav-menu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenuBtn.classList.remove("active");
+      navMenu.classList.remove("active");
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav") && navMenu.classList.contains("active")) {
+      mobileMenuBtn.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  });
+}
 
 const translations = {
   "pt-br": {
