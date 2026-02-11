@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Portfolio | Tiele Fernandes</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav">
+        <div class="logo">Tiele Fernandes</div>
+
+        <nav>
+            <a href="#about">Sobre</a>
+            <a href="#exp">Experiência</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projetos</a>
+        </nav>
+
+        <div class="right" id="langToggle">
+            <button id="ptBtn" onclick="setLang('pt')">PT</button>
+            <button id="enBtn" onclick="setLang('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="foto-tica.jpg" class="foto">
+        <h1>Tiele Fernandes</h1>
+
+        <h2 id="title">QA Engineer | Test Automation | API Testing</h2>
+
+        <p class="about-hero">
+            QA Engineer with experience in manual testing, Cypress automation and API validation.
+            Focused on delivering quality in web applications and improving testing processes
+            with automation and CI/CD practices.
+        </p>
+
+        <p class="open">🟢 Open to remote international opportunities</p>
+
+        <div class="hero-buttons">
+            <a href="cv-en.pdf" class="btn-main" download>Download CV</a>
+            <a href="https://github.com/tielefernandes" target="_blank" class="btn-outline"><i
+                    class="fab fa-github"></i></a>
+        </div>
+        <a href="https://www.linkedin.com/in/tiele-fernandes/" target="_blank" class="hire"><i
+                class="fab fa-linkedin"></i>
+            Let’s work together →
+        </a>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="about">
+        <h3 id="aboutTitle">Sobre mim</h3>
+        <p id="aboutText">
+            Profissional de Qualidade de Software com experiência em automação Cypress,
+            testes de API e garantia de qualidade em produtos digitais.
+        </p>
+    </section>
+
+
+    <section class="certifications">
+        <h3>Certifications</h3>
+
+        <div class="cert-badge">
+            <img src="s-ctfl.png" alt="ISTQB CTFL Certification">
+        </div>
+    </section>
+    <section class="learning">
+        <h3>Currently Learning</h3>
+
+        <div class="cards">
+
+            <!-- DEVOPS -->
+            <div class="card">
+                <div class="card-top">
+                    <h4>DevOps Formation</h4>
+                    <span class="github">📚</span>
+                </div>
+
+                <p class="desc">
+                    DevOps professional training focused on CI/CD, Docker, pipelines and cloud.
+                </p>
+
+                <div class="stack">
+                    <i class="devicon-docker-plain colored"></i>
+                    <i class="devicon-azure-plain colored"></i>
+                    <i class="devicon-jenkins-line colored"></i>
+                    <i class="devicon-githubactions-plain colored"></i>
+                </div>
+            </div>
+
+            <!-- FRONTEND -->
+            <div class="card">
+                <div class="card-top">
+                    <h4>Frontend Development</h4>
+                    <span class="github">💻</span>
+                </div>
+
+                <p class="desc">
+                    Frontend training at Origamid: HTML, CSS, JavaScript and modern interfaces.
+                </p>
+
+                <div class="stack">
+                    <i class="devicon-html5-plain colored"></i>
+                    <i class="devicon-css3-plain colored"></i>
+                    <i class="devicon-javascript-plain colored"></i>
+                    <i class="devicon-react-original colored"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- EXPERIÊNCIA -->
+    <section id="exp">
+        <h3 id="expTitle">Experience</h3>
+
+        <div class="timeline">
+
+            <div class="job">
+                <div class="job-header">
+                    <h4>Testing Senior Specialist — NTT DATA</h4>
+                    <span class="date">2025 - Present</span>
+                </div>
+
+                <p class="job-desc">
+                    Manual testing, Cypress automation, API testing and CI/CD pipeline validation.
+                </p>
+
+                <div class="job-stack">
+                    <span>Cypress</span>
+                    <span>API Testing</span>
+                    <span>Azure</span>
+                    <span>CI/CD</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h4>QA Analyst — WayCarbon</h4>
+                    <span class="date">2023 - 2024</span>
+                </div>
+
+                <p class="job-desc">
+                    BDD scenarios, exploratory testing and regression testing in ESG platform.
+                </p>
+
+                <div class="job-stack">
+                    <span>BDD</span>
+                    <span>Cypress</span>
+                    <span>API</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h4>Analista de Qualidade de Software — CWI Software</h4>
+                    <span class="date">2022 - 2023</span>
+                </div>
+
+                <p class="job-desc">
+                    Mobile tests
+                </p>
+
+                <div class="job-stack">
+                    <span>BDD</span>
+                    <span>Cypress</span>
+                    <span>API</span>
+                    <span>SpecFlow</span>
+                    <span>Cucumber</span>
+                    <span>Apium</span>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h4>Software Tester — Senior Sistemas</h4>
+                    <span class="date">2021 - 2023</span>
+                </div>
+
+                <p class="job-desc">
+                    Just automation tests
+                </p>
+
+                <div class="job-stack">
+                    <span>Jira</span>
+                    <span>WebDriverIO</span>
+                    <span>Sellenium</span>
+                    <span>AgileTTesting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h3>Skills</h3>
+
+        <div class="skill">
+            <p>Cypress</p>
+            <div class="bar">
+                <div style="width:90%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>API Testing</p>
+            <div class="bar">
+                <div style="width:85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>BDD / Gherkin</p>
+            <div class="bar">
+                <div style="width:95%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projects">
+        <h3>Projetos QA</h3>
+
+        <div class="cards">
+
+            <!-- CYPRESS -->
+            <a href="https://github.com/tielefernandes/study-cypress-cucumber" target="_blank" class="card-link">
+                <div class="card">
+                    <div class="card-top">
+                        <h4>Automation E2E Cypress</h4>
+                        <span class="github">↗</span>
+                    </div>
+
+                    <p class="desc">
+                        Complete purchase flow automation using Page Objects and BDD.
+                    </p>
+
+                    <div class="stack">
+                        <i class="devicon-cypressio-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-cucumber-plain colored"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- API -->
+            <a href="#" target="_blank" class="card-link">
+                <div class="card">
+                    <div class="card-top">
+                        <h4>API Testing</h4>
+                        <span class="github">↗</span>
+                    </div>
+
+                    <p class="desc">
+                        REST API validation using Postman, collections and automated checks.
+                    </p>
+
+                    <div class="stack">
+                        <i class="devicon-postman-plain colored"></i>
+                        <i class="devicon-swagger-plain colored"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- TEST STRATEGY -->
+            <div class="card">
+                <div class="card-top">
+                    <h4>Test Strategy</h4>
+                </div>
+
+                <p class="desc">
+                    Complete test plan and strategy for fintech application.
+                </p>
+
+                <div class="stack">
+                    <i class="devicon-githubactions-plain colored"></i>
+                    <i class="devicon-docker-plain colored"></i>
+                    <i class="devicon-azure-plain colored"></i>
+                    <i class="devicon-jira-plain colored"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="knowledge">
+        <h3>Knowledge & Tools</h3>
+
+        <div class="knowledge-list">
+
+            <!-- automação -->
+            <div class="know-item">
+                <i class="devicon-selenium-original colored"></i>
+                <span>Selenium</span>
+            </div>
+
+            <div class="know-item">
+                <i class="devicon-webdriverio-plain colored"></i>
+                <span>WebdriverIO</span>
+            </div>
+
+            <div class="know-item">
+                <i class="devicon-cucumber-plain colored"></i>
+                <span>SpecFlow / BDD</span>
+            </div>
+
+            <!-- gestão -->
+            <div class="know-item">
+                <i class="devicon-trello-plain colored"></i>
+                <span>Trello</span>
+            </div>
+
+            <!-- CI/CD -->
+            <div class="know-item">
+                <i class="devicon-azure-plain colored"></i>
+                <span>Azure Pipelines</span>
+            </div>
+
+            <!-- banco -->
+            <div class="know-item">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL</span>
+            </div>
+
+            <div class="know-item">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
+            </div>
+
+            <div class="know-item">
+                <i class="devicon-dbeaver-plain colored"></i>
+                <span>DBeaver</span>
+            </div>
+
+            <!-- performance -->
+            <div class="know-item">
+                <i class="devicon-apache-plain colored"></i>
+                <span>JMeter</span>
+            </div>
+
+            <div class="know-item">
+                <i class="devicon-k6-plain colored"></i>
+                <span>K6</span>
+            </div>
+
+            <!-- browser -->
+            <div class="know-item">
+                <i class="devicon-chrome-plain colored"></i>
+                <span>Browser DevTools</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 — Tiele Fernandes
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
