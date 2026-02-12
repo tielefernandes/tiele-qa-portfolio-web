@@ -17,9 +17,7 @@
 
     <!-- NAV -->
     <header class="nav">
-        <div class="logo">Tiele Fernandes</div>
-
-        <nav>
+        <nav class="nav-menu">
             <a href="#about" id="navAbout">Sobre</a>
             <a href="#exp" id="navExp">Experiência</a>
             <a href="#skills" id="navSkills">Skills</a>
@@ -27,9 +25,15 @@
         </nav>
 
         <div class="right" id="langToggle">
-            <button id="ptBtn" onclick="setLang('pt-br')">PT-BR</button>
+            <button id="ptBtn" onclick="setLang('pt-br')">PT</button>
             <button id="enBtn" onclick="setLang('en')">EN</button>
         </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- HERO -->

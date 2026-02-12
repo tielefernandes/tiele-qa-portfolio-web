@@ -6,6 +6,7 @@ body {
         radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.04), transparent 40%),
         #f7f7f8;
     color: #111;
+    overflow-x: hidden;
 }
 
 
@@ -19,15 +20,56 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 30px;
+    padding: 18px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
 }
 
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    min-width: 50px;
+}
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #6c63ff;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 .hero {
@@ -663,7 +705,544 @@ footer {
     color: #6c63ff;
 }
 
-/* texto */
+/* ======================== RESPONSIVIDADE MOBILE ======================== */
+
+/* Tablets e telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    .nav {
+        padding: 15px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        margin: 10px 0;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: left;
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        order: 3;
+    }
+
+    #langToggle {
+        order: 2;
+        margin-right: 15px;
+    }
+
+    .hero {
+        margin-top: 100px;
+        padding: 30px 15px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-left {
+        flex-shrink: 1;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .pill {
+        max-width: 150px;
+        text-align: center;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 10px 0;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pill {
+        padding: 8px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+    }
+
+    section {
+        padding: 50px 15px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card h4 {
+        font-size: 16px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .job {
+        margin-left: 25px;
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+
+    .job::before {
+        left: -22px;
+        top: 24px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .job-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .job-header h4 {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .job-desc {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .job-stack {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .job-stack span {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .knowledge-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .know-item {
+        flex-direction: column;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .know-item i {
+        font-size: 24px;
+    }
+
+    .stack {
+        font-size: 22px;
+        gap: 8px;
+    }
+
+    .cert-badge {
+        padding: 20px;
+    }
+
+    .cert-badge img {
+        width: 100px;
+    }
+
+    footer {
+        padding: 30px 15px;
+        font-size: 13px;
+    }
+
+    .open {
+        font-size: 12px;
+    }
+
+    .about-hero {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 13px;
+    }
+
+    .edu-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px;
+    }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+    .nav {
+        padding: 12px 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero {
+        margin-top: 80px;
+        padding: 20px 12px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-size: 26px;
+        margin: 8px 0;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .foto {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin: 8px 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .hero-buttons {
+        gap: 6px;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-buttons .pill {
+        width: auto;
+        max-width: 90%;
+        justify-content: center;
+        white-space: normal;
+    }
+
+    .pill {
+        width: auto;
+        max-width: 90%;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 40px 12px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h4 {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .stack {
+        font-size: 20px;
+        gap: 6px;
+    }
+
+    .job {
+        margin-left: 20px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .job::before {
+        left: -19px;
+        top: 20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline::before {
+        left: 4px;
+        width: 2px;
+    }
+
+    .job-header h4 {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 11px;
+        margin-top: 3px;
+    }
+
+    .job-desc {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .job-stack {
+        gap: 5px;
+        margin-top: 8px;
+    }
+
+    .job-stack span {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+
+    .knowledge-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .know-item {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .know-item i {
+        font-size: 20px;
+    }
+
+    .cert-badge {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .cert-badge img {
+        width: 80px;
+    }
+
+    footer {
+        padding: 25px 12px;
+        font-size: 12px;
+    }
+
+    #langToggle button {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .about-hero {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .open {
+        font-size: 11px;
+    }
+
+    .edu-card {
+        padding: 15px 12px;
+    }
+
+    .edu-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Celulares muito pequenos (até 320px) */
+@media (max-width: 320px) {
+    .nav {
+        padding: 10px 10px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .hero {
+        margin-top: 70px;
+        padding: 15px 10px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-left {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-right h1 {
+        font-size: 22px;
+    }
+
+    .hero-buttons {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .foto {
+        width: 70px;
+        height: 70px;
+        border: 2px solid white;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .pill {
+        font-size: 11px;
+        padding: 8px 10px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card h4 {
+        font-size: 13px;
+    }
+
+    .stack {
+        font-size: 18px;
+    }
+
+    .job {
+        margin-left: 18px;
+        padding: 12px;
+    }
+
+    .job::before {
+        left: -17px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 11px;
+    }
+
+    .edu-card {
+        padding: 12px;
+    }
+
+    .edu-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}/* texto */
 .edu-info h3 {
     margin: 0;
     font-size: 18px;
